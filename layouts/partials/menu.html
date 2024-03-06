@@ -2,7 +2,7 @@
 <a href="#" data-sidebar-toggle="" class="show-for-small-only menu-toggle"><i class="fas fa-times"></i></a>
 {{ $currentNode := . }}
 
-{{ $currentURL := .URL }}
+{{ $currentURL := $.Site.BaseURL }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
   <div id="search-wrapper">
     {{if not .Site.Params.disableSearch}}
@@ -12,8 +12,7 @@
 
     <div class="highlightable">
     <ul class="topics">
-        <!-- <li data-nav-id="/docs/" title="Documentation" class="dd-item  {{if eq .File.Dir "docs/"}}active{{end}}"><a href="/docs/">Documentation</a></li> -->
-        {{if eq .Site.Params.ordersectionsby "title"}}
+       {{if eq .Site.Params.ordersectionsby "title"}}
           {{range .Site.Home.Sections.ByTitle}}
           {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
           {{end}}

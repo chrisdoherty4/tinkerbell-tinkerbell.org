@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {{ hugo.Generator }}
     {{ partial "meta.html" . }}
     {{ partial "favicon.html" . }}
@@ -12,7 +12,7 @@
     {{ partial "scripts.html" . }}
 
     {{ partial "ga.html" . }}
-  
+
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
@@ -40,12 +40,10 @@
           <div class="cell {{ if ne .Params.sidebar "false" }}large-9{{else}}large-12{{end}}">
             <section id="body">
               <article class="article">
-                <!--  
+                <!--
                 {{ partial "breadcrumb.html" . }}
                 -->
-              <div id="head-tags">
-              {{ partial "tags.html" . }}
-              </div>
+
               {{ if .Params.chapter }}
                 <div id="chapter">
               {{ end }}
@@ -59,4 +57,4 @@
                   </h1>
                 {{end}}
 
-              
+

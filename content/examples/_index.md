@@ -12,9 +12,3 @@ Here is a list of available workflow examples:
 - [Netboot.xyz](/examples/netboot-xyz)
 - [Flatcar Container Linux](/examples/flatcar-container-linux)
 
-{{% notice tip %}}
-When a workflow completes, you generally end up at the prompt: `localhost login:`.
-You can simply login as `root`.
-No password is required to login.
-You can then use `docker` to check or debug the action containers.
-{{% /notice %}}
